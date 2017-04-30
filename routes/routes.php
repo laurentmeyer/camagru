@@ -1,20 +1,21 @@
 <?php
 
+require_once(dirname(__FILE__) . '/../app/controllers/users_controller.php');
 
-//var_dump($_SERVER['POST']);
+$uri = $_SERVER['REQUEST_URI'];
+$method = $_SERVER['REQUEST_METHOD'];
 
-$exp = explode('/', trim($_SERVER['REQUEST_URI']));
-
-if ($exp[1] == 'users') {
-	include(dirname(__FILE__) . '/users.php');
-} else if ($exp[1] == 'sessions') {
-	include(dirname(__FILE__) . '/sessions.php');
-} else if ($exp[1] == 'images') {
-	include(dirname(__FILE__) . '/images.php');
-} else if ($exp[1] == 'test') {
-	include(dirname(__FILE__) . '/../public/test.php');
+if (preg_match('|^/users/new|', $uri) && $method == 'GET') {
+	UsersController::new_user($_GET);
+} else if (preg_match('|^/users/create|', $uri) && $method == 'POST') {
+	UsersController::create_user($_POST);
+} else if (preg_match('|^/users/edit|', $uri) && $method == 'GET') {
+	//
+} else if (preg_match('|^/users/update|', $uri) && $method == 'PATCH') {
+	//
 } else {
 	include(dirname(__FILE__) . '/../public/404.php');
 }
+
 
 ?>

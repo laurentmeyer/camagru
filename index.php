@@ -1,5 +1,5 @@
 <?php
 
-include(dirname(__FILE__) .'/public/index.php');
+include(dirname(__FILE__) .'/app/views/photos/new.php');
 
 ?>

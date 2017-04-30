@@ -2,12 +2,12 @@
 
 //require_once(dirname(__FILE__) . '/src/query.php');
 require_once(dirname(__FILE__) . '/config/database.php');
-require_once(dirname(__FILE__) . '/classes/User.class.php');
+require_once(dirname(__FILE__) . '/app/models/User.php');
 
 
 $new = new User (array ('login' => 'toto', 'email' => 'toto@toto.com', 'password' => 'toto'));
 $new->save();
-$new = new User (array ('login' => 'toto', 'email' => '', 'password' => 'fion'));
+$new = new User (array ('login' => 'lolo', 'email' => '', 'password' => 'fion'));
 $new->save();
 
 //try
