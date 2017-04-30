@@ -1,0 +1,9 @@
+Authentification
+au moment de la 
+
+
+
+Comment faire en sorte de n'avoir qu'une seule connexion utilisee tout au long ?
+no quotes ever around parameters
+
+ameliorer la gestion d'erreurs du mot de passe etc.

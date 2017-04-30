@@ -1,0 +1,8 @@
+Creer le fichier:
+- avec le meme nom que celui qu'on veut tester, en appendant 'Test' avant le .php
+- et dans une arborescence identique a celle du fichier a tester
+
+Y creer la classe de test, qui herite de \PHPUnit_Framework_TestCase
+
+Lancer phpunit sans test => doit echouer.
+Verifie qu'on ne s'est pas planté dans le fichier.
